@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px solid black;
+}
+
+.site-title {
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.site-description {
+    margin: 0;
+    padding: 0;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    min-height: 60vh;
+}
+
+nav {
+    width: 180px;
+    padding: 15px 10px;
+    margin: 10px;
+    border-right: 1px solid black;
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 8px 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.productos-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.producto-card {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid black;
+}
+
+.producto-card img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.producto-card h3 {
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.producto-card p {
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.categorias-lista {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.categorias-lista li {
+    padding: 5px 0;
+    margin: 0;
+}
+
+footer {
+    padding: 20px;
+    margin: 0;
+    border-top: 2px solid black;
+}
+
+footer ul {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+footer li {
+    padding: 3px 0;
+}
