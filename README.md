@@ -1,19 +1,21 @@
 # GameZone - Tienda de Videojuegos
 
-Sitio web estático desarrollado en HTML5 como actividad formativa.
+Sitio web estático desarrollado en HTML5 y CSS3 como actividad formativa.
 
 ## Descripción
 
-GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio fue construido utilizando únicamente HTML5.
+GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio fue construido utilizando HTML5 y CSS3.
 
 ## Tecnologías utilizadas
 
 - HTML5
+- CSS3
 
 ## Estructura del proyecto
 
 ```
-GameZone
+├── css
+│   └── styles.css
 ├── img
 │   ├── elden-ring.jpg
 │   ├── spider-man2.jpg
@@ -22,6 +24,7 @@ GameZone
 │   ├── pag1.png
 │   ├── pag2.png
 │   └── validacion.png
+├── .gitattributes
 ├── README.md
 └── index.html
 ```
