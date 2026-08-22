@@ -187,3 +187,23 @@ footer a {
     color: var(--color-acento);
     text-decoration: none;
 }
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+.producto-card:nth-child(odd) {
+    background-color: #252535;
+}
+
+.producto-card a:hover {
+    opacity: 0.8;
+}
+
+.categorias-lista li:nth-child(odd) {
+    color: var(--color-texto);
+}
