@@ -110,22 +110,38 @@ section h2 {
     margin-bottom: 15px;
 }
 
+/* --- Grid de productos --- */
 .productos-lista {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .producto-card {
     padding: 15px;
-    margin: 10px 0;
     border: 1px solid var(--color-borde);
+    border-radius: 8px;
     background-color: var(--color-fondo-card);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(124, 106, 247, 0.25);
 }
 
 .producto-card img {
     display: block;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
 }
 
 .producto-card h3 {
@@ -137,15 +153,21 @@ section h2 {
 }
 
 .producto-card p {
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
     padding: 0;
     color: var(--color-texto-secundario);
+    flex-grow: 1;
 }
 
 .producto-card a {
     text-decoration: none;
     color: var(--color-acento);
     font-weight: 600;
+    align-self: flex-start;
+    border: 1px solid var(--color-acento);
+    padding: 5px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .categorias-lista {
@@ -196,12 +218,9 @@ footer a:hover {
     opacity: 0.8;
 }
 
-.producto-card:nth-child(odd) {
-    background-color: #252535;
-}
-
 .producto-card a:hover {
-    opacity: 0.8;
+    background-color: var(--color-acento);
+    color: #ffffff;
 }
 
 .categorias-lista li:nth-child(odd) {
