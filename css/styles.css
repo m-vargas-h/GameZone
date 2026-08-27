@@ -32,25 +32,27 @@ body {
 }
 
 header {
-    padding: 20px;
+    padding: 40px 30px;
     margin: 0;
     border-bottom: 2px solid var(--color-borde);
-    background-color: var(--color-fondo-header);
+    background: linear-gradient(135deg, var(--color-fondo-header) 60%, #1a1a2e);
 }
 
 .site-title {
-    font-size: xx-large;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin: 0 0 6px 0;
     color: var(--color-acento);
     letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(124, 106, 247, 0.6);
 }
 
 .site-description {
     margin: 0;
     padding: 0;
     color: var(--color-texto-secundario);
-    font-size: 15px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
 
 .contenido {
@@ -218,6 +220,34 @@ footer a:hover {
     opacity: 0.8;
 }
 
+#contacto {
+    border-top: 2px solid var(--color-acento);
+    background: linear-gradient(135deg, #1a1a2e, var(--color-fondo-header));
+    text-align: center;
+    letter-spacing: 0.5px;
+    padding: 30px 20px;
+}
+
+#contacto h2 {
+    color: var(--color-acento);
+    margin-bottom: 8px;
+}
+
+#contacto p {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+
+#contacto ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+}
+
+#contacto li {
+    padding: 3px 0;
+}
+
 .producto-card a:hover {
     background-color: var(--color-acento);
     color: #ffffff;
@@ -225,6 +255,17 @@ footer a:hover {
 
 .categorias-lista li:nth-child(odd) {
     color: var(--color-texto);
+}
+
+nav a:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.producto-card a:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 4px;
 }
 
 /* --- Diseño responsivo --- */
