@@ -1,24 +1,25 @@
 # GameZone - Tienda de Videojuegos
 
-Sitio web estático responsivo desarrollado en HTML5 y CSS3.
+Sitio web estático responsivo desarrollado en HTML5, CSS3 y Bootstrap 5.
 
 ## Descripción
 
-GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio implementa un diseño responsivo adaptado a escritorio, tablet y móvil mediante CSS Grid, Flexbox y media queries.
+GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio implementa un diseño responsivo mediante Bootstrap 5, CSS Grid, Flexbox y media queries.
 
 ## Tecnologías utilizadas
 
 - HTML5 semántico
-- CSS3 (variables, Flexbox, Grid, media queries)
+- CSS3 (variables, Flexbox, media queries)
+- Bootstrap 5.3.3 (navbar, carousel, grid system, cards)
 - GitHub Pages (despliegue)
 
 ## Características
 
-- Diseño responsivo con breakpoints en 768px y 480px
-- Grid de productos con 3, 2 o 1 columna según el dispositivo
-- Nav lateral en escritorio que se convierte en barra horizontal en móvil
+- Navbar responsiva con colapso en móvil (botón hamburguesa)
+- Carrusel de 5 imágenes con transición automática cada 3 segundos
+- Grid de productos con 10 títulos organizados en cards Bootstrap
+- Columna lateral con categorías disponibles
 - Variables CSS para paleta de colores coherente
-- Selectores por etiqueta, clase, ID y pseudo-clases (`:hover`, `:nth-child`, `:focus-visible`)
 - Accesibilidad básica con `:focus-visible` en links y botones
 
 ## Vista previa
@@ -37,8 +38,20 @@ GameZone es una tienda de videojuegos en línea que presenta productos destacado
 ├── css
 │   └── styles.css
 ├── img
+│   ├── baldurs-gate-3.jpg
+│   ├── banner-baldurs-gate-3.jpg
+│   ├── banner-black-myth-wukong.jpg
+│   ├── banner-cities-skylines-2.jpg
+│   ├── banner-ea-fc-25.jpg
+│   ├── banner-nba-2k25.jpg
+│   ├── black-myth-wukong.jpg
+│   ├── cities-skylines-2.jpg
+│   ├── cyberpunk-2077.jpg
+│   ├── ea-fc-25.jpg
 │   ├── elden-ring.jpg
+│   ├── nba-2k25.jpg
 │   ├── spider-man2.jpg
+│   ├── the-sims-4.jpg
 │   └── zelda-totk.jpg
 ├── screenshots
 │   ├── validacion.png
@@ -56,6 +69,9 @@ El documento HTML fue validado mediante [W3C Markup Validation Service](https://
 
 ![Resultado de validación W3C](screenshots/validacion.png)
 
-## Sitio publicado
+### Decisiones de marcado
 
-[https://m-vargas-h.github.io/GameZone/](https://m-vargas-h.github.io/GameZone/)
+Los títulos del carrusel y las cards usan `<h3 class="h5">` en lugar de `<h5>` directamente.
+El nivel semántico `<h3>` mantiene la jerarquía correcta dentro del documento (h1 → h2 → h3),
+mientras que la clase utilitaria `h5` de Bootstrap preserva el tamaño visual original.
+Esta combinación evita saltos de nivel detectados por el validador sin alterar el diseño.
