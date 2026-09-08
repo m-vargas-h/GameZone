@@ -4,13 +4,13 @@ Sitio web estático responsivo desarrollado en HTML5, CSS3 y Bootstrap 5.
 
 ## Descripción
 
-GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio implementa un diseño responsivo mediante Bootstrap 5, CSS Grid, Flexbox y media queries.
+GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio implementa un diseño responsivo mediante Bootstrap 5, Flexbox y media queries.
 
 ## Tecnologías utilizadas
 
 - HTML5 semántico
 - CSS3 (variables, Flexbox, media queries)
-- Bootstrap 5.3.3 (navbar, carousel, grid system, cards)
+- Bootstrap 5.3.3 (navbar, carousel, grid system, cards, utilidades Flexbox)
 - GitHub Pages (despliegue)
 
 ## Características
