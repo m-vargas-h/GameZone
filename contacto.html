@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | GameZone</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <style>
+        /* Estilos específicos del formulario */
+        .form-control,
+        .form-select {
+            background-color: var(--color-fondo-card);
+            color: var(--color-texto);
+            border-color: var(--color-borde);
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background-color: var(--color-fondo-card);
+            color: var(--color-texto);
+            border-color: var(--color-acento);
+            box-shadow: 0 0 0 0.2rem rgba(124, 106, 247, 0.25);
+        }
+
+        .form-select option {
+            background-color: var(--color-fondo-card);
+        }
+
+        .form-label {
+            color: var(--color-texto-secundario);
+            font-weight: 600;
+        }
+
+        #mensaje-enviado {
+            display: none;
+            color: var(--color-acento);
+            font-weight: 600;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="principal">
+
+        <!-- Navbar -->
+        <nav id="navbar-principal" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fw-bold" href="./index.html">
+                    🎮 GameZone
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <p class="site-title">GameZone</p>
+            <p class="site-description">Tu tienda de videojuegos de confianza</p>
+        </header>
+
+        <!-- Contenido principal -->
+        <div class="contenido">
+            <main>
+                <section>
+                    <h2>Contáctanos</h2>
+
+                    <div class="container-fluid px-0">
+
+                        <!-- Nombre -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-2">
+                                <label class="form-label" for="input-nombre">Nombre:</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <input type="text" id="input-nombre" class="form-control"
+                                    placeholder="Tu nombre completo">
+                            </div>
+                        </div>
+
+                        <!-- Correo -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-2">
+                                <label class="form-label" for="input-email">Correo:</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <input type="email" id="input-email" class="form-control"
+                                    placeholder="tucorreo@ejemplo.com">
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-2">
+                                <label class="form-label" for="input-telefono">Teléfono:</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <input type="tel" id="input-telefono" class="form-control"
+                                    placeholder="+56 9 1234 5678">
+                            </div>
+                        </div>
+
+                        <!-- Motivo -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-2">
+                                <label class="form-label" for="select-motivo">Motivo:</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <select id="select-motivo" class="form-select">
+                                    <option value="" disabled selected>Selecciona un motivo</option>
+                                    <option value="consulta">Consulta</option>
+                                    <option value="reclamo">Reclamo</option>
+                                    <option value="soporte">Soporte técnico</option>
+                                    <option value="despacho">Problema con despacho</option>
+                                    <option value="devolucion">Devolución o reembolso</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-2">
+                                <label class="form-label" for="input-mensaje">Mensaje:</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <textarea id="input-mensaje" class="form-control" rows="6"
+                                    placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Botón enviar -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-10 d-flex justify-content-end">
+                                <button id="btn-enviar" type="button" class="btn btn-gamezone px-4">
+                                    Enviar mensaje
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Mensaje de confirmación -->
+                        <div class="row">
+                            <div class="col-12 col-md-10">
+                                <p id="mensaje-enviado">✔ ¡Mensaje enviado! Te responderemos a la brevedad.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <h2>GameZone</h2>
+            <p>© 2025 GameZone. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS del formulario -->
+    <script src="./js/contacto.js"></script>
+</body>
+
+</html>

@@ -12,7 +12,6 @@ const API_URL = "https://api.gamebrain.co/v1/games?limit=6&sort_by=rating";
 document.addEventListener("DOMContentLoaded", function () {
     crearSeccionCatalogo();
     configurarEventosProductos();
-    configurarFormularioContacto();
     cargarJuegosDesdeAPI();
 });
 
@@ -85,67 +84,6 @@ function configurarEventosProductos() {
 
             console.log(`Producto seleccionado: ${titulo}`);
         });
-    });
-}
-
-// 3b. SUBMIT en el formulario de contacto (creado dinámicamente)
-//     Valida y muestra un mensaje de confirmación
-function configurarFormularioContacto() {
-    const footer = document.querySelector("#contacto");
-
-    // Crea el formulario dinámicamente con createElement
-    const formulario = document.createElement("form");
-    formulario.id = "form-contacto";
-    formulario.className = "mt-3";
-    formulario.innerHTML = `
-        <div class="mb-2">
-            <input
-                type="text"
-                id="input-nombre"
-                class="form-control"
-                placeholder="Tu nombre"
-                style="background:#2a2a3e; color:#e0e0e0; border-color:#3a3a4e;"
-            >
-        </div>
-        <div class="mb-2">
-            <input
-                type="email"
-                id="input-email"
-                class="form-control"
-                placeholder="Tu correo electrónico"
-                style="background:#2a2a3e; color:#e0e0e0; border-color:#3a3a4e;"
-            >
-        </div>
-        <button type="submit" class="btn btn-gamezone">Enviar mensaje</button>
-        <p id="mensaje-confirmacion" style="color: var(--color-acento); margin-top: 8px; display: none;">
-            ¡Mensaje enviado! Te responderemos pronto.
-        </p>
-    `;
-
-    // Inserta el formulario antes del cierre del footer
-    footer.appendChild(formulario);
-
-    // Evento SUBMIT: valida campos y muestra confirmación
-    formulario.addEventListener("submit", function (evento) {
-        evento.preventDefault(); // Evita recarga de la página
-
-        const nombre = document.getElementById("input-nombre").value.trim();
-        const email = document.getElementById("input-email").value.trim();
-        const mensaje = document.getElementById("mensaje-confirmacion");
-
-        if (nombre === "" || email === "") {
-            alert("Por favor completa todos los campos.");
-            return;
-        }
-
-        // Muestra el mensaje de confirmación y limpia el formulario
-        mensaje.style.display = "block";
-        formulario.reset();
-
-        // Oculta el mensaje después de 4 segundos
-        setTimeout(function () {
-            mensaje.style.display = "none";
-        }, 4000);
     });
 }
 
