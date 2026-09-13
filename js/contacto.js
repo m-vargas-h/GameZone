@@ -1,11 +1,7 @@
-// ============================================================
-// contacto.js — GameZone | Validación del formulario de contacto
-// ============================================================
+// formulario de contacto
 
 document.addEventListener("DOMContentLoaded", function () {
-    crearSeccionCatalogo();
-    configurarEventosProductos();
-    cargarJuegosDesdeAPI();
+    configurarFormulario();
 });
 
 /**
@@ -39,9 +35,7 @@ function configurarFormulario() {
     });
 }
 
-/**
- * Limpia todos los campos del formulario tras el envío.
- */
+//Limpia todos los campos del formulario tras el envío.
 function limpiarFormulario() {
     document.getElementById("input-nombre").value = "";
     document.getElementById("input-email").value = "";

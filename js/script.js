@@ -1,24 +1,15 @@
-// ============================================================
-// script.js — GameZone | Semana 5 | Manipulación del DOM
-// ============================================================
-
-// ─── Constantes de configuración ────────────────────────────
+// Constantes de configuración
 const API_KEY = "7ae8425c52374c608010c58646c51e9a";
 const API_URL = "https://api.gamebrain.co/v1/games?limit=6&sort_by=rating";
 
-// ============================================================
 // 1. INICIALIZACIÓN — espera a que el DOM esté listo
-// ============================================================
 document.addEventListener("DOMContentLoaded", function () {
     crearSeccionCatalogo();
     configurarEventosProductos();
     cargarJuegosDesdeAPI();
 });
 
-// ============================================================
-// 2. MANIPULACIÓN DEL DOM
-//    Crea dinámicamente la sección "Descubre más juegos"
-// ============================================================
+// 2. MANIPULACIÓN DEL DOM - Crea dinámicamente la sección "Descubre más juegos"
 function crearSeccionCatalogo() {
     // Selecciona el contenedor principal donde se insertará la sección
     const main = document.querySelector("main");
@@ -47,12 +38,9 @@ function crearSeccionCatalogo() {
     main.appendChild(seccion);
 }
 
-// ============================================================
 // 3. EVENTOS
-// ============================================================
 
-// 3a. MOUSEOVER en cards de productos destacados
-//     Resalta la card al pasar el cursor encima
+// 3a. MOUSEOVER en cards de productos destacados - Resalta la card al pasar el cursor encima
 function configurarEventosProductos() {
     const cards = document.querySelectorAll(".card-gamezone");
 
@@ -87,10 +75,7 @@ function configurarEventosProductos() {
     });
 }
 
-// ============================================================
-// 4. FETCH API
-//    Carga juegos desde GameBrain y los muestra dinámicamente
-// ============================================================
+// 4. FETCH API - Carga juegos desde GameBrain y los muestra dinámicamente
 function cargarJuegosDesdeAPI() {
     const contenedor = document.getElementById("contenedor-api");
 
@@ -124,10 +109,7 @@ function cargarJuegosDesdeAPI() {
         });
 }
 
-// ============================================================
-// 5. RENDERIZADO
-//    Genera las cards de juegos con los datos de la API
-// ============================================================
+// 5. RENDERIZADO - Genera las cards de juegos con los datos de la API
 function mostrarJuegosEnDOM(datos) {
     const contenedor = document.getElementById("contenedor-api");
     contenedor.innerHTML = "";
@@ -175,10 +157,7 @@ function mostrarJuegosEnDOM(datos) {
     aplicarEventosCardsAPI();
 }
 
-// ============================================================
-// 6. EVENTOS EN CARDS DE LA API
-//    Aplica el mismo efecto hover a las cards cargadas dinámicamente
-// ============================================================
+// 6. EVENTOS EN CARDS DE LA API - Aplica el mismo efecto hover a las cards cargadas dinámicamente
 function aplicarEventosCardsAPI() {
     const cardsAPI = document.querySelectorAll("#contenedor-api .card-gamezone");
 

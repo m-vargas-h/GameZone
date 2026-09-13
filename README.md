@@ -1,16 +1,18 @@
 # GameZone - Tienda de Videojuegos
 
-Sitio web estático responsivo desarrollado en HTML5, CSS3 y Bootstrap 5.
+Sitio web responsivo desarrollado en HTML5, CSS3, Bootstrap 5 y JavaScript.
 
 ## Descripción
 
-GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles e información de contacto. El sitio implementa un diseño responsivo mediante Bootstrap 5, Flexbox y media queries.
+GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles y un formulario de contacto. El sitio implementa manipulación del DOM, eventos y consumo de API externa mediante JavaScript vanilla.
 
 ## Tecnologías utilizadas
 
 - HTML5 semántico
 - CSS3 (variables, Flexbox, media queries)
 - Bootstrap 5.3.3 (navbar, carousel, grid system, cards, utilidades Flexbox)
+- JavaScript ES6 (manipulación del DOM, eventos, Fetch API)
+- GameBrain API (carga dinámica de juegos)
 - GitHub Pages (despliegue)
 
 ## Características
@@ -19,6 +21,9 @@ GameZone es una tienda de videojuegos en línea que presenta productos destacado
 - Carrusel de 5 imágenes con transición automática cada 3 segundos
 - Grid de productos con 10 títulos organizados en cards Bootstrap
 - Columna lateral con categorías disponibles
+- Sección "Descubre más juegos" generada dinámicamente con Fetch API
+- Eventos mouseover y click en cards de productos
+- Página de contacto dedicada con formulario validado por JavaScript
 - Variables CSS para paleta de colores coherente
 - Accesibilidad básica con `:focus-visible` en links y botones
 
@@ -53,13 +58,18 @@ GameZone es una tienda de videojuegos en línea que presenta productos destacado
 │   ├── spider-man2.jpg
 │   ├── the-sims-4.jpg
 │   └── zelda-totk.jpg
+├── js
+│   ├── contacto.js
+│   └── script.js
 ├── screenshots
 │   ├── validacion.png
+│   ├── vista_movil.jpg
 │   ├── vista_movil.png
 │   ├── vista_pc.png
 │   └── vista_tablet.png
 ├── .gitattributes
 ├── README.md
+├── contacto.html
 └── index.html
 ```
 
