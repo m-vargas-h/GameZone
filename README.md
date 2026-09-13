@@ -31,12 +31,15 @@ GameZone es una tienda de videojuegos en línea que presenta productos destacado
 
 ### Escritorio
 ![Vista escritorio](screenshots/vista_pc.png)
+![Vista escritorio](screenshots/vista_pc1.png)
 
 ### Tablet
 ![Vista tablet](screenshots/vista_tablet.png)
+![Vista tablet](screenshots/vista_tablet1.png)
 
 ### Móvil
-![Vista móvil](screenshots/vista_movil.png)
+<img src="screenshots/vista_movil.png" alt="Vista móvil" width="300">
+<img src="screenshots/vista_movil1.png" alt="Vista móvil" width="300">
 
 ## Estructura del proyecto
 ```
@@ -81,7 +84,4 @@ El documento HTML fue validado mediante [W3C Markup Validation Service](https://
 
 ### Decisiones de marcado
 
-Los títulos del carrusel y las cards usan `<h3 class="h5">` en lugar de `<h5>` directamente.
-El nivel semántico `<h3>` mantiene la jerarquía correcta dentro del documento (h1 → h2 → h3),
-mientras que la clase utilitaria `h5` de Bootstrap preserva el tamaño visual original.
-Esta combinación evita saltos de nivel detectados por el validador sin alterar el diseño.
+Los títulos de las cards usan `<h3 class="h5">` para mantener coherencia visual con Bootstrap, donde la clase `h5` controla el tamaño sin afectar el nivel semántico. El validador W3C reporta un salto de nivel (h1 → h3) en la línea 87, dentro de la sección de productos. Este salto se produce porque el `<h2>` de la sección está ubicado fuera del alcance directo del validador en ese contexto. Se mantiene `<h3>` por ser el nivel jerárquico correcto dentro de cada card (subsección de un `<h2>`), aceptando la advertencia del validador como una limitación conocida.
