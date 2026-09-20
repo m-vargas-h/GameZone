@@ -14,7 +14,7 @@ let filtroPlataforma = "Todos";
 let filtroGenero = "Todos";
 
 
-// 1. INICIALIZACIÓN
+// INICIALIZACIÓN
 document.addEventListener("DOMContentLoaded", function () {
     cargarProductosDesdeJSON();
     cargarJuegosDesdeAPI();
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// 2. FETCH API — JSON LOCAL
+// FETCH API — JSON LOCAL
 
 // Carga el JSON local y dispara el renderizado de destacados y catálogo
 function cargarProductosDesdeJSON() {
@@ -56,7 +56,7 @@ function mostrarErrorCarga(idContenedor) {
 }
 
 
-// 3. RENDERIZADO — DESTACADOS (5 juegos)
+// RENDERIZADO — DESTACADOS (5 juegos)
 
 function renderizarDestacados(productos) {
     const contenedor = document.getElementById("contenedor-destacados");
@@ -74,7 +74,7 @@ function renderizarDestacados(productos) {
 }
 
 
-// 4. RENDERIZADO — CATÁLOGO COMPLETO
+// RENDERIZADO — CATÁLOGO COMPLETO
 
 function renderizarCatalogo(productos) {
     const contenedor = document.getElementById("contenedor-catalogo");
@@ -104,7 +104,7 @@ function renderizarCatalogo(productos) {
 }
 
 
-// 5. CREACIÓN DE CARDS
+// CREACIÓN DE CARDS
 
 // Genera y retorna una columna con la card de un producto
 function crearCardProducto(producto) {
@@ -156,7 +156,7 @@ function crearCardProducto(producto) {
 }
 
 
-// 6. CARRITO
+// CARRITO
 
 // Agrega un producto al carrito o aumenta su cantidad si ya existe
 function agregarAlCarrito(producto) {
@@ -229,22 +229,17 @@ function actualizarCarrito() {
 }
 
 
-// 7. BÚSQUEDA (evento submit)
+// BÚSQUEDA (evento submit)
 
 function configurarBusqueda() {
-    const btnBuscar = document.getElementById("btn-buscar");
+    const form = document.getElementById("form-busqueda");
     const inputBusqueda = document.getElementById("input-busqueda");
     const resultadoContenedor = document.getElementById("resultado-busqueda");
 
-    btnBuscar.addEventListener("click", function () {
+    // Evento submit real sobre el formulario
+    form.addEventListener("submit", function (evento) {
+        evento.preventDefault();
         ejecutarBusqueda(inputBusqueda, resultadoContenedor);
-    });
-
-    // También responde al Enter dentro del input
-    inputBusqueda.addEventListener("keydown", function (evento) {
-        if (evento.key === "Enter") {
-            ejecutarBusqueda(inputBusqueda, resultadoContenedor);
-        }
     });
 }
 
@@ -278,7 +273,7 @@ function ejecutarBusqueda(input, contenedor) {
 }
 
 
-// 8. FILTROS (plataforma y género)
+// FILTROS (plataforma y género)
 
 function configurarFiltros() {
     // Delegación de eventos en el grupo de plataforma
@@ -312,7 +307,7 @@ function configurarFiltros() {
 }
 
 
-// 9. FETCH API — API EXTERNA (GameBrain)
+// FETCH API — API EXTERNA (GameBrain)
 
 function cargarJuegosDesdeAPI() {
     const contenedor = document.getElementById("contenedor-api");

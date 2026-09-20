@@ -4,77 +4,59 @@ Sitio web responsivo desarrollado en HTML5, CSS3, Bootstrap 5 y JavaScript.
 
 ## Descripción
 
-GameZone es una tienda de videojuegos en línea que presenta productos destacados, categorías disponibles y un formulario de contacto. El sitio implementa manipulación del DOM, eventos y consumo de API externa mediante JavaScript vanilla.
+GameZone es una tienda de videojuegos en línea que presenta productos destacados, un catálogo completo con filtros, carrito de compras y un formulario de contacto. El sitio implementa manipulación del DOM, eventos, consumo de API externa y carga de datos desde un JSON local mediante JavaScript vanilla.
 
 ## Tecnologías utilizadas
 
 - HTML5 semántico
 - CSS3 (variables, Flexbox, media queries)
 - Bootstrap 5.3.3 (navbar, carousel, grid system, cards, utilidades Flexbox)
-- JavaScript ES6 (manipulación del DOM, eventos, Fetch API)
-- GameBrain API (carga dinámica de juegos)
+- JavaScript (manipulación del DOM, eventos, Fetch API)
+- JSON local (catálogo de productos)
+- GameBrain API (carga dinámica de juegos adicionales)
 - GitHub Pages (despliegue)
 
 ## Características
 
-- Navbar responsiva con colapso en móvil (botón hamburguesa)
+- Navbar responsiva con colapso en móvil (botón hamburguesa) y enlaces a secciones internas
 - Carrusel de 5 imágenes con transición automática cada 3 segundos
-- Grid de productos con 10 títulos organizados en cards Bootstrap
-- Columna lateral con categorías disponibles
-- Sección "Descubre más juegos" generada dinámicamente con Fetch API
-- Eventos mouseover y click en cards de productos
+- Sección de productos destacados: 5 títulos cargados dinámicamente desde JSON local
+- Sección de catálogo completo: 15 títulos con filtros por plataforma y género (pills Bootstrap)
+- Carrito de compras: agrega productos, muestra subtotal por ítem y total acumulado
+- Buscador con evento `submit` que filtra por nombre o género en tiempo real
+- Sección "Descubre más juegos" generada dinámicamente con Fetch API externa (GameBrain)
+- Manejo de errores con mensajes amigables si el JSON o la API no cargan
 - Página de contacto dedicada con formulario validado por JavaScript
 - Variables CSS para paleta de colores coherente
 - Accesibilidad básica con `:focus-visible` en links y botones
 
 ## Vista previa
 
-### Escritorio
-![Vista escritorio](screenshots/vista_pc.png)
-![Vista escritorio](screenshots/vista_pc1.png)
+### Escritorio (Chrome)
+![Vista escritorio](screenshots/vista-pc.gif)
 
-### Tablet
-![Vista tablet](screenshots/vista_tablet.png)
-![Vista tablet](screenshots/vista_tablet1.png)
+### Tablet — iPad Air (Firefox)
+![Vista tablet](screenshots/vista-tablet.gif)
 
-### Móvil
-<img src="screenshots/vista_movil.png" alt="Vista móvil" width="300">
-<img src="screenshots/vista_movil1.png" alt="Vista móvil" width="300">
+### Móvil — iPhone 12 (Edge)
+![Vista móvil](screenshots/vista-movil.gif)
+
+## Evidencias de funcionamiento
+
+### Carrito de compras
+![Demo carrito](screenshots/demo-carrito.gif)
+
+### Filtros por plataforma y género
+![Demo filtros](screenshots/demo-filtros.gif)
+
+### Buscador
+![Demo búsqueda](screenshots/demo-busqueda.gif)
+
+### Ver más — producto local y GameBrain
+![Demo ver más](screenshots/demo-ver-mas.gif)
 
 ## Estructura del proyecto
-```
-├── css
-│   └── styles.css
-├── img
-│   ├── baldurs-gate-3.jpg
-│   ├── banner-baldurs-gate-3.jpg
-│   ├── banner-black-myth-wukong.jpg
-│   ├── banner-cities-skylines-2.jpg
-│   ├── banner-ea-fc-25.jpg
-│   ├── banner-nba-2k25.jpg
-│   ├── black-myth-wukong.jpg
-│   ├── cities-skylines-2.jpg
-│   ├── cyberpunk-2077.jpg
-│   ├── ea-fc-25.jpg
-│   ├── elden-ring.jpg
-│   ├── nba-2k25.jpg
-│   ├── spider-man2.jpg
-│   ├── the-sims-4.jpg
-│   └── zelda-totk.jpg
-├── js
-│   ├── contacto.js
-│   └── script.js
-├── screenshots
-│   ├── validacion.png
-│   ├── vista_movil.jpg
-│   ├── vista_movil.png
-│   ├── vista_pc.png
-│   └── vista_tablet.png
-├── .gitattributes
-├── README.md
-├── contacto.html
-└── index.html
-```
+
 
 ## Validación
 
