@@ -31,17 +31,22 @@ GameZone es una tienda de videojuegos en línea que presenta productos destacado
 - Accesibilidad básica con `:focus-visible` en links y botones
 
 ## Vista previa
+Para las vistas previas se utilizaron diferentes dispositivos y navegadores para poder abarcar el mayor numero de escenarios posibles. Todas las evidencias se presentan en formato .gif
 
-### Escritorio (Chrome)
+### Escritorio
+Para la vista desde pc se utilizó el navegador Opera GX desde un pc con sistema operativo Windows 11
 ![Vista escritorio](screenshots/vista-pc.gif)
 
-### Tablet — iPad Air (Firefox)
+### Tablet
+Para esta vista se utilizó en navegador Safari desde un ipad mini
 ![Vista tablet](screenshots/vista-tablet.gif)
 
-### Móvil — iPhone 12 (Edge)
+### Móvil 
+Para esta vista se utilizo el navegador Chrome desde un teléfono con sistema operativo Android 
 ![Vista móvil](screenshots/vista-movil.gif)
 
 ## Evidencias de funcionamiento
+Las evidencias de funcionamiento fueron capturadas todas desde el dispositivo utilizado para la vista de escritorio. Todas las evidencias se presentan en formato .gif
 
 ### Carrito de compras
 ![Demo carrito](screenshots/demo-carrito.gif)
